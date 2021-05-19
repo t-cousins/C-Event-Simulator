@@ -53,12 +53,12 @@ class Simulation {
 public:
     Simulation(string name, double ratePerMin, int durationMins, int seed);
     Simulation(string name, double ratePerMin, int durationMins) : Simulation(name, ratePerMin, durationMins, random_device{}()){};
-	void run(Listener& listener);
-	list<Event*> const& getEvents(){return events;};
+    void run(Listener& listener);
+    list<Event*> const& getEvents(){return events;};
     ~Simulation();
 
 private:
-	double eventTimeDeltaMins();
+    double eventTimeDeltaMins();
     chrono::microseconds durationMicros() const;
     chrono::microseconds elapsedMicros(chrono::time_point<chrono::system_clock> const& startTime) const;
 
@@ -67,7 +67,7 @@ private:
     const double _ratePerMin;
     const int _durationMins;
     mt19937 gen;
-	uniform_real_distribution<double> rand;
+    uniform_real_distribution<double> rand;
     //  Events are stored on the heap.
     //  Pointers stored in the queue and references are passed to Listeners
     list<Event*> events;
