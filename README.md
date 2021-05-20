@@ -1,8 +1,8 @@
 # C++ Multi-Threaded Event Simulator
 
-This is a generic framework to help simulate a dynamical system. Specific use-cases might include:
-* a financial exchange: where events could represent order submissions or fills
-* the spread of a disease: where events could represent people coming into contact or the disease successfully transmitting from one person to another
+This is a generic framework to help simulate dynamical systems. Specific use-cases might include:
+* a **financial exchange**: where events could represent order submissions or fills
+* the **spread of a disease**: where events could represent people coming into contact or the disease successfully transmitting from one person to another
 
 Each `Simulation` triggers multiple `Events` at non-deterministic time intervals. A simulation is defined by the `ratePerMin` at which events occur on-average and the total length of the simulation: `durationMins`. A `Listener` is notified each time an event is triggered. A `MultiThreadedSimulation` can run multiple simulations in parallel.
 
@@ -11,7 +11,7 @@ Each `Simulation` triggers multiple `Events` at non-deterministic time intervals
 * `src/*`: C++ code that ultimately compiles into a library
 * `test/lib/*`: C++ libraries used for testing (e.g. GoogleTest)
 * `test/src/*`: C++ unit tests
-* `bin/`, `lib/` and `include/` are all empty directories until the program is installed (see below)
+* `bin/`, `build/`, `lib/` and `include/` are all empty directories until the program is built and installed (see below)
 
 ## Building the Project
 
@@ -32,12 +32,11 @@ Checkout the code from git into `event-simulator/`:
 
 ### Building
 
-To build from the terminal first you need to checkout the git submodules that the project depends on: GoogleTest in this case. Then create a `build` folder to contain all of the build artifacts and use `cmake` to generate the `Makefile`. Lastly use `make` to compile the project and `make install` to copy files into the above project structure.
+To build from the terminal first you need to checkout the git submodules that the project depends on: GoogleTest in this case. Navigate to the `build` folder, which will contain all of the build artifacts, and use `cmake` to generate the `Makefile`. Lastly use `make` to compile the project and `make install` to copy files into the above project structure.
 
 ```bash
 ❯ cd event-simulator
 ❯ git submodule init && git submodule update
-❯ mkdir build
 ❯ cd build
 ❯ cmake ..
 ❯ make && make install
@@ -94,20 +93,24 @@ Finished Sim2: 4 events @ 2.50 events per min for 180.00s
 
 ### Importing into Eclipse
 
-Follow the previous steps to fully checkout the project from the terminal, but don't run `cmake` or `make`. It's now easy to import the project into Eclipse.
+Follow the previous steps to fully checkout the project from the terminal, but don't run `cmake` or `make`. It's now easy to import the project into Eclipse:
 
-* Create a new project: File - New - Other
-* Select C/C++ - C++ Project
-* Call the project *event-simulator* and select an empty Makefile project (see below)
+* Create a new project: *File -> New -> Other*
+* Select *C/C++ -> C++* Project
+* Call the project *event-simulator* and select an empty Makefile project (see below):
 
-* Right-click on the new *event-simulator* project in Project Explorer and select Import
-* Select General - File System
+* Right-click on the new *event-simulator* project in Project Explorer and select *Import*
+* Select *General -> File System*
 * Browse to `event-simulator/` where we previously checked-out the project
-* Click Select All and Finish
-* Create a `build/` folder if you haven't already, by 
+* Click *Select All* and *Finish*
+* Select the *Build Targets* tab on the right-side of Eclipse: here we will create a *Target* to generate Makefiles from the CMakeLists.txt
+* Right-click the `build/` folder and *New*
+* Fill in the form as illustrated below:  
 
-
-After following the previous steps to build the project from the terminal, it's easy to import the project into Eclipse.
+* Double-click the new *cmake* target. This should generate files in `build/` as if we had performed it from the terminal
+* Right-click *event-simulator* in Project Explorer and select *Properties*
+* Under *C/C++ Build*, click on *Workspace* and navigate to `build/`
+* Finally, right-click *event-simulator* in Project Explorer and hit *Build Project*
 
 
 
