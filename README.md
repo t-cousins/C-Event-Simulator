@@ -72,7 +72,7 @@ You can now use the executable binaries to run the program from the terminal.
 [  PASSED  ] 4 tests.
 ```
 
-#### Program
+#### Simulation
 
 The following runs an illustrative use of the project for two parallel simulations. The actual output will look slightly different on each run.
 
@@ -112,6 +112,6 @@ Follow the previous steps to fully checkout the project from the terminal, but d
 * Under *C/C++ Build*, click on *Workspace* and navigate to `build/`
 * Finally, right-click *event-simulator* in Project Explorer and hit *Build Project*
 
-
-
 ### Using it as a C++ library
+
+We build a small static library that can be easily linked into another program.
