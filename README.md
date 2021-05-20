@@ -98,6 +98,7 @@ Follow the previous steps to fully checkout the project from the terminal, but d
 * Create a new project: *File -> New -> Other*
 * Select *C/C++ -> C++* Project
 * Call the project *event-simulator* and select an empty Makefile project (see below):
+![NEW_PROJECT](docs/eclipse_create_project.png)
 * Right-click on the new *event-simulator* project in Project Explorer and select *Import*
 * Select *General -> File System*
 * Browse to `event-simulator/` where we previously checked-out the project
@@ -105,6 +106,7 @@ Follow the previous steps to fully checkout the project from the terminal, but d
 * Select the *Build Targets* tab on the right-side of Eclipse: here we will create a *Target* to generate Makefiles from the CMakeLists.txt
 * Right-click the `build/` folder and *New*
 * Fill in the form as illustrated below:  
+![NEW_TARGET](docs/eclipse_create_target.png)
 * Double-click the new *cmake* target. This should generate files in `build/` as if we had performed it from the terminal
 * Right-click *event-simulator* in Project Explorer and select *Properties*
 * Under *C/C++ Build*, click on *Workspace* and navigate to `build/`
