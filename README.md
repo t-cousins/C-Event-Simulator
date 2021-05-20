@@ -82,15 +82,21 @@ The following runs an illustrative use of the project for two parallel simulatio
 ❯ bin/simulator
 Starting Sim1 
 Starting Sim2 
-Event Triggered: Sim1:event1 @ 5.73s
-Event Triggered: Sim1:event2 @ 12.88s
-Event Triggered: Sim1:event3 @ 44.13s
-Finished Sim1: 3 events @ 5.00 events per min for 60.00s
-Event Triggered: Sim2:event1 @ 97.37s
-Event Triggered: Sim2:event2 @ 104.67s
-Event Triggered: Sim2:event3 @ 169.72s
-Event Triggered: Sim2:event4 @ 178.57s
-Finished Sim2: 4 events @ 2.50 events per min for 180.00s
+Event Triggered: Sim1:event1 @ 3.63s
+Event Triggered: Sim2:event1 @ 4.91s
+Event Triggered: Sim1:event2 @ 5.52s
+Event Triggered: Sim1:event3 @ 17.82s
+Event Triggered: Sim1:event4 @ 24.46s
+Event Triggered: Sim1:event5 @ 31.86s
+Event Triggered: Sim2:event2 @ 40.89s
+Event Triggered: Sim1:event6 @ 44.15s
+Finished Sim1: 6 events @ 5.00 events per min for 60.00s
+Event Triggered: Sim2:event3 @ 66.83s
+Event Triggered: Sim2:event4 @ 116.45s
+Event Triggered: Sim2:event5 @ 124.09s
+Event Triggered: Sim2:event6 @ 153.63s
+Event Triggered: Sim2:event7 @ 169.75s
+Finished Sim2: 7 events @ 2.50 events per min for 180.00s
 ```
 
 ### Importing into Eclipse
