@@ -1,10 +1,10 @@
-# C++ Multi-Threaded Discrete Event Simulator
+# C++ Multi-Threaded Event Simulator
+
+This is a generic framework to help simulate a dynamical system. Specific use-cases might include:
+* a financial exchange: where events could represent order submissions or fills
+* the spread of a disease: where events could represent people coming into contact or the disease successfully transmitting from one person to another
 
 Each `Simulation` triggers multiple `Events` at non-deterministic time intervals. A simulation is defined by the `ratePerMin` at which events occur on-average and the total length of the simulation: `durationMins`. A `Listener` is notified each time an event is triggered. A `MultiThreadedSimulation` can run multiple simulations in parallel.
-
-This generic framework could be used to simulate many different dynamical systems. For example:
-* a financial exchange: where events could be order submissions or fills
-* the spread of a disease: where events could be two people coming into contact or the disease successfully transmitting from one to the other
 
 ## Project Structure
 
@@ -24,12 +24,10 @@ You will need:
 
 ### Checkout
 
-Checkout the code from git:
+Checkout the code from git into `event-simulator/`:
 
 ```bash
-❯ git clone \
-    https://github.com/t-cousins/C-Event-Simulator \
-    event-simulator
+❯ git clone https://github.com/t-cousins/C-Event-Simulator event-simulator
 ```
 
 ### Building
@@ -96,7 +94,21 @@ Finished Sim2: 4 events @ 2.50 events per min for 180.00s
 
 ### Importing into Eclipse
 
-After following the previous steps to build the project from the terminal, it's easy to import the project into Eclipse, which supports CMake.
+Follow the previous steps to fully checkout the project from the terminal, but don't run `cmake` or `make`. It's now easy to import the project into Eclipse.
+
+* Create a new project: File - New - Other
+* Select C/C++ - C++ Project
+* Call the project *event-simulator* and select an empty Makefile project (see below)
+
+* Right-click on the new *event-simulator* project in Project Explorer and select Import
+* Select General - File System
+* Browse to `event-simulator/` where we previously checked-out the project
+* Click Select All and Finish
+* Create a `build/` folder if you haven't already, by 
+
+
+After following the previous steps to build the project from the terminal, it's easy to import the project into Eclipse.
 
 
 
+### Using it as a C++ library
