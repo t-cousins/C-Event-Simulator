@@ -6,7 +6,7 @@ This is a generic framework to help simulate dynamical systems. Specific use-cas
 
 Each `Simulation` triggers multiple `Events` at non-deterministic time intervals. A simulation is defined by the `ratePerMin` at which events occur on-average and the total length of the simulation: `durationMins`. A `Listener` is notified each time an event is triggered. A `MultiThreadedSimulation` can run multiple simulations in parallel.
 
-I took some inspiration from the following articles, [1](https://users.cs.northwestern.edu/~agupta/_projects/networking/QueueSimulation/mm1.html) [2](https://www.informs-sim.org/wsc06papers/001.pdf). These also feature possible extensions to the framework, for example, allowing events to trigger other events or modelling interactions between events.
+I took some inspiration from the following articles, [[1](https://users.cs.northwestern.edu/~agupta/_projects/networking/QueueSimulation/mm1.html)] [[2](https://www.informs-sim.org/wsc06papers/001.pdf)]. These also feature possible extensions to the framework, for example, allowing events to trigger other events or modelling interactions between events.
 
 ## Project Structure
 
